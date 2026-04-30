@@ -66,6 +66,8 @@ a {
   display: none;
 }
 
+
+
 /* HERO SECTION */
 
 * {
@@ -240,13 +242,216 @@ a {
     }
 }
 
-/* CONTACT SECTION */
-body 
-{ margin: 0; font-family: Arial, sans-serif; line-height: 1.6; 
-  background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216') no-repeat center/cover;
+/* HERO-ABOUT US */
+
+body {
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    line-height: 1.7;
 }
 
-header {
+/* HERO */
+/* .about-hero {
+    position: relative;
+    height: 65vh;
+    overflow: hidden;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+} */
+
+.about-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(65%);
+}
+
+.about-hero h1 {
+    bottom: 40px;
+    left: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+}
+
+/* SECTION */
+section {
+    padding: 60px 25px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    color: #111827;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    width: 70px;
+    height: 4px;
+    background: #2563eb;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+section p {
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+    color: #555;
+    font-size: 1rem;
+}
+
+/* GRID LAYOUT */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* CARD */
+.about-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+}
+
+/* IMAGE */
+.about-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.about-card:hover img {
+    transform: scale(1.08);
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+
+/* CARD DETAILS */
+.about-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.about-details h4 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-family: 'Poppins', sans-serif;
+    color: #111827;
+}
+
+.about-details p {
+    font-size: 15px;
+    color: #6b7280;
+}
+
+/* VALUES */
+.values {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.value-item {
+    background: #e0e7ff;
+    color: #1e3a8a;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.value-item:hover {
+    background: #2563eb;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* BUTTON */
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin-top: 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* GUARANTEE */
+.guarantee {
+    background: #ffffff;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 50px 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .about-hero {
+        height: 45vh;
+    }
+
+    .about-hero h1 {
+        font-size: 2rem;
+        left: 20px;
+        bottom: 20px;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    .about-card img {
+        height: 200px;
+    }
+}
+
+/* CONTACT SECTION */
+.contact-container
+{ margin: 0; 
+  padding: 20px;
+  font-family: Arial, sans-serif; line-height: 1.6; 
+  background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216') no-repeat center/cover;
+  filter: brightness(60%);
+}
+
+.contact-container header {
   color: white;
   display: flex;
   align-items: center;
@@ -254,9 +459,9 @@ header {
   text-align: center;
 }
 
-header h1 { 
+.contact-container header h1 { 
   font-size: 3rem; 
-  background: rgba(0,0,0,0.5); 
+  background: rgba(236, 230, 230, 0.5); 
   padding: 10px 20px; 
 }
 
@@ -301,8 +506,13 @@ form button:hover {
    margin-top: 10px; font-weight: bold; 
   }
 
+  .contact-container p, h2, h1{
+    color: white;
+  }
+
 .info, .faq { 
-  margin-top: 30px; 
+  margin: 50px; 
+  color: white;
 }
 
 iframe { 
